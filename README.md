@@ -7,7 +7,7 @@ It is a demo project using GraphQL API x Spring Boot x Apollo iOS.
 features
 * register user from app
 * fetch book list
-* enable user to order book
+* order book
 
 <img src="video.gif" width=200>
 
