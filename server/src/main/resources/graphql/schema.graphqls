@@ -1,0 +1,32 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
+
+type Book {
+    id: ID!
+    name: String!
+    price: Int!
+}
+
+type PreOrder {
+    id: ID!
+    user_id: ID!
+    book_id: ID!
+}
+
+type Query {
+    getUser(id:ID!): User
+    getAllUser: [User]!
+    getBook(id:ID!): Book
+    getAllBook: [Book]!
+    getPreOrderedBooks(userId: ID!): [Book]!
+    getApplicants(bookId: ID!): [User]!
+}
+
+type Mutation {
+    registerUser(name: String!, email: String!): User
+    registerBook(name: String!, price: Int!): Book
+    preOrder(userId: ID!, bookId: ID!): PreOrder
+}

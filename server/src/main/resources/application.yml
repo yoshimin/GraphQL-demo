@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: demo
+    password: pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+graphiql:
+  enabled: true
+graphql:
+  servlet:
+    exception-handlers-enabled: true
+    websocket:
+      enabled: false
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

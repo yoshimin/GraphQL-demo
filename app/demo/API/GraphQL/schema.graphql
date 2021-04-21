@@ -1,0 +1,20 @@
+query Books($userId: ID!) {
+  getAllBook {
+    id,name,price
+  }
+  getPreOrderedBooks(userId: $userId) {
+    id
+  }
+}
+
+mutation User($name: String!, $email: String!) {
+  registerUser(name: $name, email: $email) {
+    id, name
+  }
+}
+
+mutation PreOrder($userId: ID!, $bookId: ID!) {
+  preOrder(userId: $userId, bookId: $bookId) {
+    id
+  }
+}
