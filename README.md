@@ -12,7 +12,7 @@ features
 <img src="video.gif" width=200>
 
 ### GraphQL + Spring Boot
-GraphQL in Spring Boot using [Spring Boot GraphQL Starter](https://github.com/graphql-java-kickstart/graphql-spring-boot).<br>
+It is able to create GraphQL server easily using [Spring Boot GraphQL Starter](https://github.com/graphql-java-kickstart/graphql-spring-boot).<br>
 GraphQL also has a tool called GraphiQL that is able to execute queries and mutations.
 
 ```
@@ -111,7 +111,7 @@ We can try API here.
 [How to query all the GraphQL type fields without writing a long query?](https://stackoverflow.com/questions/34199982/how-to-query-all-the-graphql-type-fields-without-writing-a-long-query) )
 
 #### ExceptionHandler
-It is able to use `@ExceptionHandler` annotation for custom GraphQLErrors when `graphql.servlet.exception-handlers-enabled` is `true` link this.
+It is able to use `@ExceptionHandler` annotation to customize GraphQLErrors by setting `graphql.servlet.exception-handlers-enabled` to `true` like this.
 ```
 @Component
 class DemoAppExceptionHandler {
@@ -141,7 +141,11 @@ It is able to display any text into message, location and classification by cust
 ##### schema.json
 Apollo iOS requires a GraphQL schema file as input to the code generation process. A schema file is a JSON file that contains the results of an introspection query. Conventionally this file is called `schema.json`.<br>
 We can use the [Apollo CLI](https://www.apollographql.com/docs/devtools/cli/) or [Gradle plugin](https://mvnrepository.com/artifact/com.apollographql.apollo/apollo-runtime) to download a GraphQL schema.
-After downloading the file, add it into `${SRCROOT}/${TARGET_NAME}` directory as following..
+
+* [To use Apollo CLI](https://www.apollographql.com/docs/ios/downloading-schema/)
+* [To use Gradle plugin](https://www.apollographql.com/docs/android/essentials/get-started-java/)
+
+After downloading the file, we need to add it into `${SRCROOT}/${TARGET_NAME}` directory as following.
 ```
 app
 |-- demo
@@ -153,9 +157,6 @@ app
 |
 +-- demo.xcodepro
 ```
-
-* [To use Apollo CLI](https://www.apollographql.com/docs/ios/downloading-schema/)
-* [To use Gradle plugin](https://www.apollographql.com/docs/android/essentials/get-started-java/)
 
 In this project, I'm using apollo-runtime. And downloaded file by following command.
 ```
