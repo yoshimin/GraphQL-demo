@@ -190,12 +190,12 @@ There are detail procedure in following link.
 https://www.apollographql.com/docs/ios/installation/
 
 > 1. Install the Apollo framework into your project and link it to your application target
-2. Add a schema file to your target directory
-3. (optional) Install the Xcode add-ons to get syntax highlighting for your .graphql files
-4. Create .graphql files with your queries or mutations and add them to your target
-5. Add a code generation build step to your target
-6. Build your target
-7. Add the generated API file to your target
+> 2. Add a schema file to your target directory
+> 3. (optional) Install the Xcode add-ons to get syntax highlighting for your .graphql files
+> 4. Create .graphql files with your queries or mutations and add them to your target
+> 5. Add a code generation build step to your target
+> 6. Build your target
+> 7. Add the generated API file to your target
 
 After generate code following guide above, we can call GraphQL API in iOS client like this.
 
